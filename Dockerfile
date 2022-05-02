@@ -1,4 +1,4 @@
-FROM alpine:3.15.3
+FROM alpine:3.15.4
 
 LABEL org.opencontainers.image.authors="contact@ethersys.fr"
 LABEL org.opencontainers.image.source="https://github.com/ethersys/ethersys-docker-ssh-client"
