@@ -5,4 +5,14 @@ LABEL org.opencontainers.image.source="https://github.com/ethersys/ethersys-dock
 LABEL org.opencontainers.image.description="Minimalist image for running openssh client, usefull for continuous integration task."
 
 RUN apk add --no-cache openssh-client
+
+RUN adduser \
+    --disabled-password \
+    --gecos "" \
+    --home /home/ethersys \
+    --uid 1000 \
+    ethersys
+
+USER ethersys
+
 ENTRYPOINT ["/usr/bin/ssh"]
